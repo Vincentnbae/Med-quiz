@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>오답노트</title>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+    .question-box { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .question-box h3 { color: #dc3545; }
+    .option { margin: 8px 0; }
+    .explanation { margin-top: 5px; color: #555; }
+    .result-box { background: #fff3cd; padding: 15px; margin-top: 20px; border-radius: 8px; }
+    button { padding: 10px 20px; font-size: 16px; margin-top: 20px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>📝 오답노트 복습</h1>
+  <div id="quiz-container"></div>
+  <button onclick="submitWrongQuiz()">제출하기</button>
+  <div id="result" class="result-box" style="display:none;"></div>
+  <button onclick="goBack()">← 메인 퀴즈로 돌아가기</button>
+
+  <script>
+    let wrongData = [];
+
+    function loadWrongQuiz() {
+      const data = localStorage.getItem("wrongAnswers");
+      if (!data) {
+        document.getElementById("quiz-container").innerHTML = "<p>저장된 오답이 없습니다.</p>";
+        return;
+      }
+
+      wrongData = JSON.parse(data);
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+
+      wrongData.forEach((q, index) => {
+        const optionsHtml = q.options.map((opt, i) => `
+          <label class="option">
+            <input type="radio" name="q${index}" value="${opt}"> ${opt}
+          </label>
+        `).join("");
+
+        container.innerHTML += `
+          <div class="question-box">
+            <h3>${index + 1}. ${q.question}</h3>
+            ${optionsHtml}
+            <div class="explanation" id="exp${index}"></div>
+          </div>
+        `;
+      });
+    }
+
+    function submitWrongQuiz() {
+      let score = 0;
+      wrongData.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        const explanationDiv = document.getElementById(`exp${index}`);
+
+        if (selected) {
+          if (selected.value === q.answer) {
+            score++;
+            explanationDiv.innerHTML = `✅ 정답입니다!<br><strong>해설:</strong> ${q.explanation}`;
+          } else {
+            explanationDiv.innerHTML = `❌ 오답입니다. 정답: <strong>${q.answer}</strong><br><strong>해설:</strong> ${q.explanation}`;
+          }
+        } else {
+          explanationDiv.innerHTML = `⚠️ 선택하지 않았습니다.<br><strong>정답:</strong> ${q.answer}<br><strong>해설:</strong> ${q.explanation}`;
+        }
+      });
+
+      const resultBox = document.getElementById("result");
+      resultBox.style.display = "block";
+      resultBox.innerHTML = `<h2>오답노트 점수: ${score} / ${wrongData.length}</h2>`;
+    }
+
+    function goBack() {
+      window.location.href = "index.html";
+    }
+
+    loadWrongQuiz();
+  </script>
+
+</body>
+</html>
