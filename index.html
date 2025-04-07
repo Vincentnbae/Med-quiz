@@ -24,7 +24,7 @@
     let quizData = [];
 
     async function loadQuiz() {
-      const response = await fetch("medical_quiz_30.json");
+      const response = await fetch("medical_quiz_30_korean.json");
       quizData = await response.json();
 
       const container = document.getElementById("quiz-container");
