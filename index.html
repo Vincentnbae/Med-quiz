@@ -1,4 +1,3 @@
-<!-- 기존 코드 위에 그대로 덮어써도 됨 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -32,7 +31,7 @@
       container.innerHTML = "";
 
       quizData.forEach((q, index) => {
-        const optionsHtml = q.options.map((opt, i) => `
+        const optionsHtml = q.options.map((opt) => `
           <label class="option">
             <input type="radio" name="q${index}" value="${opt}"> ${opt}
           </label>
@@ -50,7 +49,7 @@
 
     function submitQuiz() {
       let score = 0;
-      let wrongList = [];
+      const wrongList = [];
 
       quizData.forEach((q, index) => {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
