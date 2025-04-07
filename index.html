@@ -10,12 +10,22 @@
     .option { margin: 8px 0; }
     .explanation { margin-top: 5px; color: #555; }
     .result-box { background: #e2f0d9; padding: 15px; margin-top: 20px; border-radius: 8px; }
-    button { padding: 10px 20px; font-size: 16px; margin-top: 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button, select { padding: 10px 20px; font-size: 16px; margin-top: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    select { background: white; color: black; border: 1px solid #ccc; }
   </style>
 </head>
 <body>
 
-  <h1>의학 용어 퀴즈 (30문제)</h1>
+  <h1>의학 용어 퀴즈</h1>
+
+  <label for="fileSelector">🔽 문제 선택:</label>
+  <select id="fileSelector" onchange="loadQuiz()">
+    <option value="medical_quiz_20250408.json">2025-04-08 신규 문제</option>
+    <option value="medical_quiz_prefix.json">접두사 문제</option>
+    <option value="medical_quiz_suffix.json">접미사 문제</option>
+    <option value="medical_quiz_30_korean.json">기존 복습 문제</option>
+  </select>
+
   <div id="quiz-container"></div>
   <button onclick="submitQuiz()">제출하기</button>
   <div id="result" class="result-box" style="display:none;"></div>
@@ -24,7 +34,8 @@
     let quizData = [];
 
     async function loadQuiz() {
-      const response = await fetch("medical_quiz_30_korean.json");
+      const filename = document.getElementById("fileSelector").value;
+      const response = await fetch(filename);
       quizData = await response.json();
 
       const container = document.getElementById("quiz-container");
@@ -45,6 +56,8 @@
           </div>
         `;
       });
+
+      document.getElementById("result").style.display = "none";
     }
 
     function submitQuiz() {
@@ -69,7 +82,7 @@
         }
       });
 
-      // ✅ 오답 누적 저장 + 횟수 기록
+      // 누적 저장 + 횟수
       const existingWrong = JSON.parse(localStorage.getItem("wrongAnswers") || "[]");
       const wrongMap = new Map();
       existingWrong.forEach(q => wrongMap.set(q.question, { ...q }));
@@ -86,7 +99,6 @@
       const updatedWrongList = Array.from(wrongMap.values());
       localStorage.setItem("wrongAnswers", JSON.stringify(updatedWrongList));
 
-      // 결과 출력
       const resultBox = document.getElementById("result");
       resultBox.style.display = "block";
       resultBox.innerHTML = `<h2>총 점수: ${score} / ${quizData.length}</h2>`;
@@ -105,7 +117,8 @@
       }
     }
 
-    loadQuiz();
+    // 페이지 로드시 기본 문제 자동 로딩
+    window.onload = loadQuiz;
   </script>
 
 </body>
