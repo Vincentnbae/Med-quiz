@@ -31,7 +31,7 @@
       container.innerHTML = "";
 
       quizData.forEach((q, index) => {
-        const optionsHtml = q.options.map((opt) => `
+        const optionsHtml = q.options.map(opt => `
           <label class="option">
             <input type="radio" name="q${index}" value="${opt}"> ${opt}
           </label>
@@ -69,23 +69,38 @@
         }
       });
 
-      // 오답 저장
-      localStorage.setItem("wrongAnswers", JSON.stringify(wrongList));
+      // ✅ 오답 누적 저장 + 횟수 기록
+      const existingWrong = JSON.parse(localStorage.getItem("wrongAnswers") || "[]");
+      const wrongMap = new Map();
+      existingWrong.forEach(q => wrongMap.set(q.question, { ...q }));
 
+      wrongList.forEach(q => {
+        if (wrongMap.has(q.question)) {
+          wrongMap.get(q.question).wrongCount = (wrongMap.get(q.question).wrongCount || 1) + 1;
+        } else {
+          q.wrongCount = 1;
+          wrongMap.set(q.question, q);
+        }
+      });
+
+      const updatedWrongList = Array.from(wrongMap.values());
+      localStorage.setItem("wrongAnswers", JSON.stringify(updatedWrongList));
+
+      // 결과 출력
       const resultBox = document.getElementById("result");
       resultBox.style.display = "block";
       resultBox.innerHTML = `<h2>총 점수: ${score} / ${quizData.length}</h2>`;
 
       if (wrongList.length > 0) {
         resultBox.innerHTML += `
-          <p>오답 ${wrongList.length}개가 저장되었습니다.</p>
+          <p>누적 오답 ${updatedWrongList.length}개 저장됨</p>
           <button onclick="goToWrong()">오답노트 보기</button>
         `;
       }
     }
 
     function goToWrong() {
-      if (confirm("오답노트 페이지로 이동하시겠습니까?")) {
+      if (confirm("오답노트 페이지로 이동할까요?")) {
         window.location.href = "wrong.html";
       }
     }
