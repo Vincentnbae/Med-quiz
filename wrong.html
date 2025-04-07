@@ -11,6 +11,7 @@
     .explanation { margin-top: 5px; color: #555; }
     .result-box { background: #fff3cd; padding: 15px; margin-top: 20px; border-radius: 8px; }
     button { padding: 10px 20px; font-size: 16px; margin-top: 20px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .wrong-count { font-size: 14px; color: #888; margin-top: 5px; }
   </style>
 </head>
 <body>
@@ -20,6 +21,7 @@
   <button onclick="submitWrongQuiz()">제출하기</button>
   <div id="result" class="result-box" style="display:none;"></div>
   <button onclick="goBack()">← 메인 퀴즈로 돌아가기</button>
+  <button onclick="clearWrongAnswers()">🧹 오답노트 초기화</button>
 
   <script>
     let wrongData = [];
@@ -36,7 +38,7 @@
       container.innerHTML = "";
 
       wrongData.forEach((q, index) => {
-        const optionsHtml = q.options.map((opt, i) => `
+        const optionsHtml = q.options.map(opt => `
           <label class="option">
             <input type="radio" name="q${index}" value="${opt}"> ${opt}
           </label>
@@ -45,6 +47,7 @@
         container.innerHTML += `
           <div class="question-box">
             <h3>${index + 1}. ${q.question}</h3>
+            <div class="wrong-count">❗누적 오답 횟수: ${q.wrongCount || 1}회</div>
             ${optionsHtml}
             <div class="explanation" id="exp${index}"></div>
           </div>
@@ -77,6 +80,14 @@
 
     function goBack() {
       window.location.href = "index.html";
+    }
+
+    function clearWrongAnswers() {
+      if (confirm("정말 오답노트를 초기화할까요?")) {
+        localStorage.removeItem("wrongAnswers");
+        alert("오답노트가 초기화되었습니다.");
+        location.reload();
+      }
     }
 
     loadWrongQuiz();
