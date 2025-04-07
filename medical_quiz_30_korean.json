@@ -1,0 +1,332 @@
+[
+  {
+    "question": "What does 'dermat/o' refer to?",
+    "options": [
+      "Skin",
+      "Blood",
+      "Lung",
+      "Bone"
+    ],
+    "answer": "Skin",
+    "explanation": "'dermat/o'는 피부를 의미합니다. 예: dermatology (피부과)."
+  },
+  {
+    "question": "What does the prefix 'hyper-' mean?",
+    "options": [
+      "Low",
+      "Excessive",
+      "Normal",
+      "None"
+    ],
+    "answer": "Excessive",
+    "explanation": "'hyper-'는 과도함을 의미합니다. 예: hypertension (고혈압)."
+  },
+  {
+    "question": "What does 'oste/o' refer to?",
+    "options": [
+      "Muscle",
+      "Bone",
+      "Nerve",
+      "Skin"
+    ],
+    "answer": "Bone",
+    "explanation": "'oste/o'는 뼈를 의미합니다. 예: osteoporosis (골다공증)."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'hepat/o'는 간을 의미합니다. 예: hepatitis (간염)."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'hepat/o'는 간을 의미합니다. 예: hepatitis (간염)."
+  },
+  {
+    "question": "What does the suffix '-itis' mean?",
+    "options": [
+      "Tumor",
+      "Inflammation",
+      "Cutting",
+      "Condition"
+    ],
+    "answer": "Inflammation",
+    "explanation": "'-itis'는 염증을 의미합니다. 예: arthritis (관절염)."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'brady-'는 느림을 의미합니다. 예: bradycardia (서맥)."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'cardi/o'는 심장을 의미합니다. 예: cardiology (심장학)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy'는 외과적 제거를 의미합니다. 예: appendectomy (충수 절제술)."
+  },
+  {
+    "question": "What does the prefix 'hyper-' mean?",
+    "options": [
+      "Low",
+      "Excessive",
+      "Normal",
+      "None"
+    ],
+    "answer": "Excessive",
+    "explanation": "'hyper-'는 과도함을 의미합니다. 예: hypertension (고혈압)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy'는 외과적 제거를 의미합니다. 예: appendectomy (충수 절제술)."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'brady-'는 느림을 의미합니다. 예: bradycardia (서맥)."
+  },
+  {
+    "question": "What does the suffix '-algia' mean?",
+    "options": [
+      "Swelling",
+      "Pain",
+      "Blood",
+      "Flow"
+    ],
+    "answer": "Pain",
+    "explanation": "'-algia'는 통증을 의미합니다. 예: neuralgia (신경통)."
+  },
+  {
+    "question": "What does the suffix '-algia' mean?",
+    "options": [
+      "Swelling",
+      "Pain",
+      "Blood",
+      "Flow"
+    ],
+    "answer": "Pain",
+    "explanation": "'-algia'는 통증을 의미합니다. 예: neuralgia (신경통)."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'cardi/o'는 심장을 의미합니다. 예: cardiology (심장학)."
+  },
+  {
+    "question": "What does the prefix 'tachy-' mean?",
+    "options": [
+      "Slow",
+      "Normal",
+      "Fast",
+      "Blocked"
+    ],
+    "answer": "Fast",
+    "explanation": "'tachy-'는 빠름을 의미합니다. 예: tachycardia (빈맥)."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'brady-'는 느림을 의미합니다. 예: bradycardia (서맥)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy'는 외과적 제거를 의미합니다. 예: appendectomy (충수 절제술)."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'brady-'는 느림을 의미합니다. 예: bradycardia (서맥)."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'hepat/o'는 간을 의미합니다. 예: hepatitis (간염)."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'cardi/o'는 심장을 의미합니다. 예: cardiology (심장학)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy'는 외과적 제거를 의미합니다. 예: appendectomy (충수 절제술)."
+  },
+  {
+    "question": "What does the prefix 'hyper-' mean?",
+    "options": [
+      "Low",
+      "Excessive",
+      "Normal",
+      "None"
+    ],
+    "answer": "Excessive",
+    "explanation": "'hyper-'는 과도함을 의미합니다. 예: hypertension (고혈압)."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'hepat/o'는 간을 의미합니다. 예: hepatitis (간염)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy'는 외과적 제거를 의미합니다. 예: appendectomy (충수 절제술)."
+  },
+  {
+    "question": "What does 'dermat/o' refer to?",
+    "options": [
+      "Skin",
+      "Blood",
+      "Lung",
+      "Bone"
+    ],
+    "answer": "Skin",
+    "explanation": "'dermat/o'는 피부를 의미합니다. 예: dermatology (피부과)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy'는 외과적 제거를 의미합니다. 예: appendectomy (충수 절제술)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy'는 외과적 제거를 의미합니다. 예: appendectomy (충수 절제술)."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'cardi/o'는 심장을 의미합니다. 예: cardiology (심장학)."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'cardi/o'는 심장을 의미합니다. 예: cardiology (심장학)."
+  }
+]
