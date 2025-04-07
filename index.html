@@ -1,8 +1,9 @@
+<!-- 기존 코드 위에 그대로 덮어써도 됨 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>Medical Terminology Quiz</title>
+  <title>의학 용어 퀴즈</title>
   <style>
     body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
     .question-box { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -49,6 +50,8 @@
 
     function submitQuiz() {
       let score = 0;
+      let wrongList = [];
+
       quizData.forEach((q, index) => {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
         const explanationDiv = document.getElementById(`exp${index}`);
@@ -59,15 +62,33 @@
             explanationDiv.innerHTML = `✅ 정답입니다!<br><strong>해설:</strong> ${q.explanation}`;
           } else {
             explanationDiv.innerHTML = `❌ 오답입니다. 정답: <strong>${q.answer}</strong><br><strong>해설:</strong> ${q.explanation}`;
+            wrongList.push(q);
           }
         } else {
           explanationDiv.innerHTML = `⚠️ 선택하지 않았습니다.<br><strong>정답:</strong> ${q.answer}<br><strong>해설:</strong> ${q.explanation}`;
+          wrongList.push(q);
         }
       });
+
+      // 오답 저장
+      localStorage.setItem("wrongAnswers", JSON.stringify(wrongList));
 
       const resultBox = document.getElementById("result");
       resultBox.style.display = "block";
       resultBox.innerHTML = `<h2>총 점수: ${score} / ${quizData.length}</h2>`;
+
+      if (wrongList.length > 0) {
+        resultBox.innerHTML += `
+          <p>오답 ${wrongList.length}개가 저장되었습니다.</p>
+          <button onclick="goToWrong()">오답노트 보기</button>
+        `;
+      }
+    }
+
+    function goToWrong() {
+      if (confirm("오답노트 페이지로 이동하시겠습니까?")) {
+        window.location.href = "wrong.html";
+      }
     }
 
     loadQuiz();
