@@ -1,111 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Medical Terminology Quiz</title>
   <style>
-    body { font-family: sans-serif; background: #f8f9fa; padding: 20px; }
-    .question { background: white; padding: 15px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-    .question h3 { color: #007bff; }
-    select { width: 100%; padding: 8px; margin-top: 10px; }
-    button { padding: 10px 20px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
-    .result { background: #e2f0d9; padding: 15px; border-radius: 8px; margin-top: 20px; }
-    .explanation { font-size: 14px; color: #555; }
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+    .question-box { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .question-box h3 { color: #007bff; }
+    .option { margin: 8px 0; }
+    .explanation { margin-top: 5px; color: #555; }
+    .result-box { background: #e2f0d9; padding: 15px; margin-top: 20px; border-radius: 8px; }
+    button { padding: 10px 20px; font-size: 16px; margin-top: 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
   </style>
 </head>
 <body>
-  <h1>Medical Terminology Review Quiz</h1>
-  <form id="quizForm"></form>
-  <button type="button" onclick="submitQuiz()">Submit</button>
-  <div id="result" class="result" style="display:none;"></div>
-  <script>
-    const questions = [
-      {
-        key: "q1",
-        text: "What does the suffix '-cele' mean?",
-        options: ["tumor", "hernia or protrusion", "cutting into", "enlargement"],
-        correct: "B",
-        explanation: "'-cele' means hernia or protrusion."
-      },
-      {
-        key: "q2",
-        text: "What is the meaning of the prefix 'brady-'?",
-        options: ["fast", "slow", "excessive", "none"],
-        correct: "B",
-        explanation: "'Brady-' means slow (e.g., bradycardia = slow heart rate)."
-      },
-      {
-        key: "q3",
-        text: "What does the term 'osteopenia' refer to?",
-        options: ["Bone inflammation", "Bone enlargement", "Bone deficiency", "Bone tumor"],
-        correct: "C",
-        explanation: "'Osteopenia' refers to decreased bone density."
-      }
-      // TODO: 나머지 문제도 이 형식대로 계속 추가 가능
-    ];
 
-    function loadQuiz() {
-      const form = document.getElementById("quizForm");
-      form.innerHTML = "";
-      questions.forEach((q, index) => {
-        const optionsHtml = q.options.map((opt, i) => {
-          const letter = String.fromCharCode(65 + i); // A, B, C, D
-          return `<option value="${letter}">${letter}. ${opt}</option>`;
-        }).join('');
-        form.innerHTML += `
-          <div class='question'>
-            <h3>${index + 1}. ${q.text}</h3>
-            <select name='${q.key}'>
-              <option value=''>-- Choose an answer --</option>
-              ${optionsHtml}
-            </select>
+  <h1>의학 용어 퀴즈 (30문제)</h1>
+  <div id="quiz-container"></div>
+  <button onclick="submitQuiz()">제출하기</button>
+  <div id="result" class="result-box" style="display:none;"></div>
+
+  <script>
+    let quizData = [];
+
+    async function loadQuiz() {
+      const response = await fetch("medical_quiz_30.json");
+      quizData = await response.json();
+
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+
+      quizData.forEach((q, index) => {
+        const optionsHtml = q.options.map((opt, i) => `
+          <label class="option">
+            <input type="radio" name="q${index}" value="${opt}"> ${opt}
+          </label>
+        `).join("");
+
+        container.innerHTML += `
+          <div class="question-box">
+            <h3>${index + 1}. ${q.question}</h3>
+            ${optionsHtml}
+            <div class="explanation" id="exp${index}"></div>
           </div>
         `;
       });
     }
 
     function submitQuiz() {
-      const form = document.getElementById("quizForm");
       let score = 0;
-      let wrongAnswers = [];
-      let resultHtml = "<h2>Results:</h2>";
+      quizData.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        const explanationDiv = document.getElementById(`exp${index}`);
 
-      questions.forEach((q, idx) => {
-        const selected = form.elements[q.key].value;
-        if (selected === q.correct) {
-          score++;
-          resultHtml += `<p>Q${idx + 1}: ✅ Correct<br><span class="explanation">${q.explanation}</span></p>`;
+        if (selected) {
+          if (selected.value === q.answer) {
+            score++;
+            explanationDiv.innerHTML = `✅ 정답입니다!<br><strong>해설:</strong> ${q.explanation}`;
+          } else {
+            explanationDiv.innerHTML = `❌ 오답입니다. 정답: <strong>${q.answer}</strong><br><strong>해설:</strong> ${q.explanation}`;
+          }
         } else {
-          resultHtml += `<p>Q${idx + 1}: ❌ Incorrect (Correct: ${q.correct})<br><span class="explanation">${q.explanation}</span></p>`;
-          wrongAnswers.push(q);
+          explanationDiv.innerHTML = `⚠️ 선택하지 않았습니다.<br><strong>정답:</strong> ${q.answer}<br><strong>해설:</strong> ${q.explanation}`;
         }
       });
 
-      resultHtml += `<p><strong>Total Score: ${score} / ${questions.length}</strong></p>`;
-
-      if (wrongAnswers.length > 0) {
-        localStorage.setItem("wrongAnswers", JSON.stringify(wrongAnswers));
-        resultHtml += `<button onclick="reviewWrong()">🔁 Retry Wrong Answers</button>`;
-      }
-
-      const resultDiv = document.getElementById("result");
-      resultDiv.innerHTML = resultHtml;
-      resultDiv.style.display = "block";
-    }
-
-    function reviewWrong() {
-      const wrong = JSON.parse(localStorage.getItem("wrongAnswers") || "[]");
-      if (wrong.length === 0) {
-        alert("No wrong answers to review!");
-        return;
-      }
-      questions.length = 0; // 기존 데이터 초기화
-      questions.push(...wrong); // 오답만 다시 퀴즈에 설정
-      loadQuiz(); // 다시 로딩
-      document.getElementById("result").style.display = "none";
+      const resultBox = document.getElementById("result");
+      resultBox.style.display = "block";
+      resultBox.innerHTML = `<h2>총 점수: ${score} / ${quizData.length}</h2>`;
     }
 
     loadQuiz();
   </script>
+
 </body>
 </html>
