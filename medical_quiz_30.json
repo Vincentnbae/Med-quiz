@@ -1,0 +1,332 @@
+[
+  {
+    "question": "What does 'dermat/o' refer to?",
+    "options": [
+      "Skin",
+      "Blood",
+      "Lung",
+      "Bone"
+    ],
+    "answer": "Skin",
+    "explanation": "'Dermat/o' refers to the skin, e.g., dermatology."
+  },
+  {
+    "question": "What does the prefix 'hyper-' mean?",
+    "options": [
+      "Low",
+      "Excessive",
+      "Normal",
+      "None"
+    ],
+    "answer": "Excessive",
+    "explanation": "'Hyper-' means excessive or high, e.g., hypertension."
+  },
+  {
+    "question": "What does 'oste/o' refer to?",
+    "options": [
+      "Muscle",
+      "Bone",
+      "Nerve",
+      "Skin"
+    ],
+    "answer": "Bone",
+    "explanation": "'Oste/o' refers to bone, e.g., osteoporosis."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'Hepat/o' refers to the liver, e.g., hepatitis."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'Hepat/o' refers to the liver, e.g., hepatitis."
+  },
+  {
+    "question": "What does the suffix '-itis' mean?",
+    "options": [
+      "Tumor",
+      "Inflammation",
+      "Cutting",
+      "Condition"
+    ],
+    "answer": "Inflammation",
+    "explanation": "'-itis' indicates inflammation, as in arthritis (joint inflammation)."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'Brady-' means slow, as in bradycardia (slow heart rate)."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'Cardi/o' refers to the heart, e.g., cardiology."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy' means surgical removal, as in appendectomy."
+  },
+  {
+    "question": "What does the prefix 'hyper-' mean?",
+    "options": [
+      "Low",
+      "Excessive",
+      "Normal",
+      "None"
+    ],
+    "answer": "Excessive",
+    "explanation": "'Hyper-' means excessive or high, e.g., hypertension."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy' means surgical removal, as in appendectomy."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'Brady-' means slow, as in bradycardia (slow heart rate)."
+  },
+  {
+    "question": "What does the suffix '-algia' mean?",
+    "options": [
+      "Swelling",
+      "Pain",
+      "Blood",
+      "Flow"
+    ],
+    "answer": "Pain",
+    "explanation": "'-algia' means pain, e.g., neuralgia (nerve pain)."
+  },
+  {
+    "question": "What does the suffix '-algia' mean?",
+    "options": [
+      "Swelling",
+      "Pain",
+      "Blood",
+      "Flow"
+    ],
+    "answer": "Pain",
+    "explanation": "'-algia' means pain, e.g., neuralgia (nerve pain)."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'Cardi/o' refers to the heart, e.g., cardiology."
+  },
+  {
+    "question": "What does the prefix 'tachy-' mean?",
+    "options": [
+      "Slow",
+      "Normal",
+      "Fast",
+      "Blocked"
+    ],
+    "answer": "Fast",
+    "explanation": "'Tachy-' means fast, as in tachycardia (fast heart rate)."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'Brady-' means slow, as in bradycardia (slow heart rate)."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy' means surgical removal, as in appendectomy."
+  },
+  {
+    "question": "What does the prefix 'brady-' mean?",
+    "options": [
+      "Fast",
+      "Slow",
+      "Excessive",
+      "Sharp"
+    ],
+    "answer": "Slow",
+    "explanation": "'Brady-' means slow, as in bradycardia (slow heart rate)."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'Hepat/o' refers to the liver, e.g., hepatitis."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'Cardi/o' refers to the heart, e.g., cardiology."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy' means surgical removal, as in appendectomy."
+  },
+  {
+    "question": "What does the prefix 'hyper-' mean?",
+    "options": [
+      "Low",
+      "Excessive",
+      "Normal",
+      "None"
+    ],
+    "answer": "Excessive",
+    "explanation": "'Hyper-' means excessive or high, e.g., hypertension."
+  },
+  {
+    "question": "What does 'hepat/o' refer to?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Stomach",
+      "Kidney"
+    ],
+    "answer": "Liver",
+    "explanation": "'Hepat/o' refers to the liver, e.g., hepatitis."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy' means surgical removal, as in appendectomy."
+  },
+  {
+    "question": "What does 'dermat/o' refer to?",
+    "options": [
+      "Skin",
+      "Blood",
+      "Lung",
+      "Bone"
+    ],
+    "answer": "Skin",
+    "explanation": "'Dermat/o' refers to the skin, e.g., dermatology."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy' means surgical removal, as in appendectomy."
+  },
+  {
+    "question": "What does the suffix '-ectomy' mean?",
+    "options": [
+      "Surgical removal",
+      "Swelling",
+      "Pain",
+      "Inflammation"
+    ],
+    "answer": "Surgical removal",
+    "explanation": "'-ectomy' means surgical removal, as in appendectomy."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'Cardi/o' refers to the heart, e.g., cardiology."
+  },
+  {
+    "question": "What does 'cardi/o' refer to?",
+    "options": [
+      "Lungs",
+      "Heart",
+      "Brain",
+      "Liver"
+    ],
+    "answer": "Heart",
+    "explanation": "'Cardi/o' refers to the heart, e.g., cardiology."
+  }
+]
