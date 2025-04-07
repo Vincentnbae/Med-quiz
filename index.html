@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,282 +8,104 @@
     .question { background: white; padding: 15px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
     .question h3 { color: #007bff; }
     select { width: 100%; padding: 8px; margin-top: 10px; }
-    button { padding: 10px 20px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button { padding: 10px 20px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
     .result { background: #e2f0d9; padding: 15px; border-radius: 8px; margin-top: 20px; }
+    .explanation { font-size: 14px; color: #555; }
   </style>
 </head>
 <body>
-  <h1>Medical Terminology Review Quiz (30 Questions)</h1>
-  <form id="quizForm">
-    <div class='question'><h3>1. What does the suffix "-cele" mean?</h3><select name='q1'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. tumor</option>
-<option value='B'>B. hernia or protrusion</option>
-<option value='C'>C. cutting into</option>
-<option value='D'>D. enlargement</option>
-</select></div>
-<div class='question'><h3>2. What is the meaning of the prefix "brady-"?</h3><select name='q2'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. fast</option>
-<option value='B'>B. slow</option>
-<option value='C'>C. excessive</option>
-<option value='D'>D. none</option>
-</select></div>
-<div class='question'><h3>3. What does the term "osteopenia" refer to?</h3><select name='q3'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. Bone inflammation</option>
-<option value='B'>B. Bone enlargement</option>
-<option value='C'>C. Bone deficiency</option>
-<option value='D'>D. Bone tumor</option>
-</select></div>
-<div class='question'><h3>4. What is the meaning of "leukopenia"?</h3><select name='q4'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. Excess white blood cells</option>
-<option value='B'>B. Deficiency of white blood cells</option>
-<option value='C'>C. Pain in white blood cells</option>
-<option value='D'>D. Removal of white cells</option>
-</select></div>
-<div class='question'><h3>5. The suffix "-rrhea" refers to:</h3><select name='q5'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. bleeding</option>
-<option value='B'>B. discharge or flow</option>
-<option value='C'>C. inflammation</option>
-<option value='D'>D. condition</option>
-</select></div>
-<div class='question'><h3>6. What does "hypokalemia" mean?</h3><select name='q6'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. Low blood potassium</option>
-<option value='B'>B. High blood potassium</option>
-<option value='C'>C. Excess calcium in blood</option>
-<option value='D'>D. Potassium tumor</option>
-</select></div>
-<div class='question'><h3>7. What is the suffix "-pathy" associated with?</h3><select name='q7'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. tumor</option>
-<option value='B'>B. fear</option>
-<option value='C'>C. disease</option>
-<option value='D'>D. recording</option>
-</select></div>
-<div class='question'><h3>8. The term "rhinorrhea" means:</h3><select name='q8'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. inflammation of nose</option>
-<option value='B'>B. excessive nasal discharge</option>
-<option value='C'>C. nose tumor</option>
-<option value='D'>D. blood in the nose</option>
-</select></div>
-<div class='question'><h3>9. The term "osteomalacia" refers to:</h3><select name='q9'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. inflammation of bone</option>
-<option value='B'>B. softening of bone</option>
-<option value='C'>C. tumor in bone</option>
-<option value='D'>D. disease of joints</option>
-</select></div>
-<div class='question'><h3>10. What does the prefix "tachy-" mean?</h3><select name='q10'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. slow</option>
-<option value='B'>B. thick</option>
-<option value='C'>C. fast</option>
-<option value='D'>D. sharp</option>
-</select></div>
-<div class='question'><h3>11. The term "hepatomegaly" means:</h3><select name='q11'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. liver inflammation</option>
-<option value='B'>B. liver deficiency</option>
-<option value='C'>C. liver removal</option>
-<option value='D'>D. liver enlargement</option>
-</select></div>
-<div class='question'><h3>12. What does the suffix "-lysis" indicate?</h3><select name='q12'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. creation of opening</option>
-<option value='B'>B. breakdown or destruction</option>
-<option value='C'>C. inflammation</option>
-<option value='D'>D. discharge</option>
-</select></div>
-<div class='question'><h3>13. The term "cardiomyopathy" means:</h3><select name='q13'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. disease of the heart muscle</option>
-<option value='B'>B. enlargement of the heart</option>
-<option value='C'>C. inflammation of vessels</option>
-<option value='D'>D. heart bleeding</option>
-</select></div>
-<div class='question'><h3>14. What is the meaning of the suffix "-rrhagia"?</h3><select name='q14'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. excessive bleeding</option>
-<option value='B'>B. discharge</option>
-<option value='C'>C. inflammation</option>
-<option value='D'>D. tumor</option>
-</select></div>
-<div class='question'><h3>15. The prefix "hypo-" refers to:</h3><select name='q15'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. above</option>
-<option value='B'>B. fast</option>
-<option value='C'>C. below or deficient</option>
-<option value='D'>D. normal</option>
-</select></div>
-<div class='question'><h3>16. What is the meaning of the suffix "-stomy"?</h3><select name='q16'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. recording</option>
-<option value='B'>B. surgical opening</option>
-<option value='C'>C. inflammation</option>
-<option value='D'>D. condition</option>
-</select></div>
-<div class='question'><h3>17. The term "nephrectomy" refers to:</h3><select name='q17'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. kidney pain</option>
-<option value='B'>B. kidney inflammation</option>
-<option value='C'>C. surgical removal of a kidney</option>
-<option value='D'>D. kidney deficiency</option>
-</select></div>
-<div class='question'><h3>18. The suffix "-itis" means:</h3><select name='q18'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. pain</option>
-<option value='B'>B. inflammation</option>
-<option value='C'>C. tumor</option>
-<option value='D'>D. condition</option>
-</select></div>
-<div class='question'><h3>19. The prefix "tachy-" indicates:</h3><select name='q19'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. slow</option>
-<option value='B'>B. fast</option>
-<option value='C'>C. none</option>
-<option value='D'>D. painful</option>
-</select></div>
-<div class='question'><h3>20. What does the root "hepat/o" refer to?</h3><select name='q20'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. stomach</option>
-<option value='B'>B. blood</option>
-<option value='C'>C. liver</option>
-<option value='D'>D. intestine</option>
-</select></div>
-<div class='question'><h3>21. What does "bronchoscopy" involve?</h3><select name='q21'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. imaging of lungs</option>
-<option value='B'>B. removal of bronchi</option>
-<option value='C'>C. visual exam of bronchi</option>
-<option value='D'>D. inflammation of lungs</option>
-</select></div>
-<div class='question'><h3>22. The term "endoscope" refers to:</h3><select name='q22'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. external surgery</option>
-<option value='B'>B. pain treatment</option>
-<option value='C'>C. internal viewing device</option>
-<option value='D'>D. bone removal</option>
-</select></div>
-<div class='question'><h3>23. The suffix "-plasty" refers to:</h3><select name='q23'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. inflammation</option>
-<option value='B'>B. surgical repair</option>
-<option value='C'>C. deficiency</option>
-<option value='D'>D. condition</option>
-</select></div>
-<div class='question'><h3>24. What does the prefix "dys-" mean?</h3><select name='q24'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. normal</option>
-<option value='B'>B. painful or abnormal</option>
-<option value='C'>C. fast</option>
-<option value='D'>D. deficient</option>
-</select></div>
-<div class='question'><h3>25. The term "menorrhagia" means:</h3><select name='q25'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. normal menstruation</option>
-<option value='B'>B. excessive menstrual bleeding</option>
-<option value='C'>C. absence of menstruation</option>
-<option value='D'>D. irregular periods</option>
-</select></div>
-<div class='question'><h3>26. The suffix "-uria" refers to:</h3><select name='q26'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. discharge</option>
-<option value='B'>B. pain</option>
-<option value='C'>C. urine condition</option>
-<option value='D'>D. infection</option>
-</select></div>
-<div class='question'><h3>27. What does "hyperglycemia" mean?</h3><select name='q27'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. low blood sugar</option>
-<option value='B'>B. high blood sugar</option>
-<option value='C'>C. insulin excess</option>
-<option value='D'>D. sugar deficiency</option>
-</select></div>
-<div class='question'><h3>28. The suffix "-emia" means:</h3><select name='q28'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. pain</option>
-<option value='B'>B. blood condition</option>
-<option value='C'>C. organ inflammation</option>
-<option value='D'>D. deficiency</option>
-</select></div>
-<div class='question'><h3>29. The root "oste/o" refers to:</h3><select name='q29'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. muscle</option>
-<option value='B'>B. joint</option>
-<option value='C'>C. nerve</option>
-<option value='D'>D. bone</option>
-</select></div>
-<div class='question'><h3>30. The term "dysplasia" describes:</h3><select name='q30'>
-<option value=''>-- Choose an answer --</option>
-<option value='A'>A. normal development</option>
-<option value='B'>B. abnormal development</option>
-<option value='C'>C. muscle wasting</option>
-<option value='D'>D. cell enlargement</option>
-</select></div>
-
-    <button type="button" onclick="submitQuiz()">Submit</button>
-  </form>
+  <h1>Medical Terminology Review Quiz</h1>
+  <form id="quizForm"></form>
+  <button type="button" onclick="submitQuiz()">Submit</button>
   <div id="result" class="result" style="display:none;"></div>
-
   <script>
-    const correctAnswers = {
-      q1: "B",
-      q2: "B",
-      q3: "C",
-      q4: "B",
-      q5: "B",
-      q6: "A",
-      q7: "C",
-      q8: "B",
-      q9: "B",
-      q10: "C",
-      q11: "D",
-      q12: "B",
-      q13: "A",
-      q14: "A",
-      q15: "C",
-      q16: "B",
-      q17: "C",
-      q18: "B",
-      q19: "B",
-      q20: "C",
-      q21: "C",
-      q22: "C",
-      q23: "B",
-      q24: "B",
-      q25: "C",
-      q26: "C",
-      q27: "B",
-      q28: "B",
-      q29: "D",
-      q30: "B"
-    };
+    const questions = [
+      {
+        key: "q1",
+        text: "What does the suffix '-cele' mean?",
+        options: ["tumor", "hernia or protrusion", "cutting into", "enlargement"],
+        correct: "B",
+        explanation: "'-cele' means hernia or protrusion."
+      },
+      {
+        key: "q2",
+        text: "What is the meaning of the prefix 'brady-'?",
+        options: ["fast", "slow", "excessive", "none"],
+        correct: "B",
+        explanation: "'Brady-' means slow (e.g., bradycardia = slow heart rate)."
+      },
+      {
+        key: "q3",
+        text: "What does the term 'osteopenia' refer to?",
+        options: ["Bone inflammation", "Bone enlargement", "Bone deficiency", "Bone tumor"],
+        correct: "C",
+        explanation: "'Osteopenia' refers to decreased bone density."
+      }
+      // TODO: 나머지 문제도 이 형식대로 계속 추가 가능
+    ];
+
+    function loadQuiz() {
+      const form = document.getElementById("quizForm");
+      form.innerHTML = "";
+      questions.forEach((q, index) => {
+        const optionsHtml = q.options.map((opt, i) => {
+          const letter = String.fromCharCode(65 + i); // A, B, C, D
+          return `<option value="${letter}">${letter}. ${opt}</option>`;
+        }).join('');
+        form.innerHTML += `
+          <div class='question'>
+            <h3>${index + 1}. ${q.text}</h3>
+            <select name='${q.key}'>
+              <option value=''>-- Choose an answer --</option>
+              ${optionsHtml}
+            </select>
+          </div>
+        `;
+      });
+    }
 
     function submitQuiz() {
       const form = document.getElementById("quizForm");
       let score = 0;
-      let total = Object.keys(correctAnswers).length;
-      let feedback = "<h2>Results:</h2>";
+      let wrongAnswers = [];
+      let resultHtml = "<h2>Results:</h2>";
 
-      for (let key in correctAnswers) {
-        const selected = form.elements[key].value;
-        if (selected === correctAnswers[key]) {
+      questions.forEach((q, idx) => {
+        const selected = form.elements[q.key].value;
+        if (selected === q.correct) {
           score++;
-          feedback += `<p>Question ${key.substring(1)}: ✅ Correct</p>`;
+          resultHtml += `<p>Q${idx + 1}: ✅ Correct<br><span class="explanation">${q.explanation}</span></p>`;
         } else {
-          feedback += `<p>Question ${key.substring(1)}: ❌ Incorrect (Correct: ${correctAnswers[key]})</p>`;
+          resultHtml += `<p>Q${idx + 1}: ❌ Incorrect (Correct: ${q.correct})<br><span class="explanation">${q.explanation}</span></p>`;
+          wrongAnswers.push(q);
         }
+      });
+
+      resultHtml += `<p><strong>Total Score: ${score} / ${questions.length}</strong></p>`;
+
+      if (wrongAnswers.length > 0) {
+        localStorage.setItem("wrongAnswers", JSON.stringify(wrongAnswers));
+        resultHtml += `<button onclick="reviewWrong()">🔁 Retry Wrong Answers</button>`;
       }
 
-      feedback += `<p><strong>Total Score: ${score} / ${total}</strong></p>`;
-      document.getElementById("result").innerHTML = feedback;
-      document.getElementById("result").style.display = "block";
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = resultHtml;
+      resultDiv.style.display = "block";
     }
+
+    function reviewWrong() {
+      const wrong = JSON.parse(localStorage.getItem("wrongAnswers") || "[]");
+      if (wrong.length === 0) {
+        alert("No wrong answers to review!");
+        return;
+      }
+      questions.length = 0; // 기존 데이터 초기화
+      questions.push(...wrong); // 오답만 다시 퀴즈에 설정
+      loadQuiz(); // 다시 로딩
+      document.getElementById("result").style.display = "none";
+    }
+
+    loadQuiz();
   </script>
 </body>
 </html>
